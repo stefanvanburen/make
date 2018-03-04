@@ -1,2 +1,2 @@
 # make
-remote repo for mmake templates
+remote repo for [mmake](https://github.com/tj/mmake) templates
