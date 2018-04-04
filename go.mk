@@ -1,23 +1,23 @@
 # Run unit tests
-.PHONY: test
 test:
 	@go test -v ./...
+.PHONY: test
 
-.PHONY: build
 build:
 	@go build .
+.PHONY: build
 
 # Check for style errors
-.PHONY: lint
 lint:
 	@golint .
+.PHONY: lint
 
 # Check for syntax errors
-.PHONY: vet
 vet:
 	@go vet .
+.PHONY: vet
 
 # Clean build artifacts and generated files
-.PHONY: clean
 clean:
 	@go clean ./...
+.PHONY: clean

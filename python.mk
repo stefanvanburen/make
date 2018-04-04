@@ -1,11 +1,14 @@
-.PHONY: install
+# Installs dependencies
 install:
 	@pipenv install
+.PHONY: install
 
-.PHONY: install-dev
+# Installs development dependencies
 install-dev:
 	@pipenv install --dev
+.PHONY: install-dev
 
-.PHONY: test
+# Runs unittests
 test:
 	@pipenv run python -m unittest
+.PHONY: test
