@@ -8,7 +8,20 @@
 
 # include compile.mk
 
+# Warning flags for C and C++:
+COMMON_FLAGS += -Wall -Wextra -pedantic -Werror
+COMMON_FLAGS += -Wmissing-declarations -g
+#COMMON_FLAGS += -Weverything
+
+CFLAGS += ${COMMON_FLAGS}
+CXXFLAGS += ${COMMON_FLAGS}
+
+# These warnings are not valid for C++:
+CFLAGS += -Wmissing-prototypes
+CFLAGS += -Wstrict-prototypes
+
 FLAGS += -MMD
+
 CFLAGS += $(FLAGS)
 CXXFLAGS += $(FLAGS)
 
