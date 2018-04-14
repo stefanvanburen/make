@@ -1,3 +1,6 @@
+.DEFAULT_GOAL := lint
+PYTHONFILES := $(wildcard **/*.py)
+
 # Installs dependencies
 install:
 	@pipenv install
@@ -12,3 +15,13 @@ install-dev:
 test:
 	@pipenv run python -m unittest
 .PHONY: test
+
+# Lints python code with mypy
+lint:
+	mypy -s $(PYTHONFILES)
+.PHONY: lint
+
+# Formats python code with black
+fmt:
+	black $(PYTHONFILES)
+.PHONY: fmt
