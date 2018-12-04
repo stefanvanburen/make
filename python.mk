@@ -11,10 +11,16 @@ install-dev:
 	@pipenv install --dev
 .PHONY: install-dev
 
-# Runs unittests
+# Runs pytest
 test:
-	@pipenv run python -m unittest
+	@pytest -q
 .PHONY: test
+
+# Watches files in the directory and runs `make test` on changes
+# requires `entr` and `rg`
+watch:
+	@rg --files | entr make test
+.PHONY: watch
 
 # Lints python code with mypy
 lint:
