@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := lint
+.DEFAULT_GOAL := test
 PYTHONFILES := $(wildcard **/*.py)
 
 # Installs dependencies
