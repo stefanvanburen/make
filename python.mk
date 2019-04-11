@@ -24,7 +24,7 @@ watch:
 
 # Lints python code with mypy
 lint:
-	mypy -s $(PYTHONFILES)
+	mypy $(PYTHONFILES)
 .PHONY: lint
 
 # Formats python code with black
