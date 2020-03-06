@@ -6,8 +6,12 @@ test:
 .PHONY: test
 
 build:
-	@go build .
+	@go build
 .PHONY: build
+
+install:
+	@go install
+.PHONY: install
 
 # Check for style errors
 lint:
